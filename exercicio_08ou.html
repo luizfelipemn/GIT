@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Nome da empresa: <input id="input_nome_empresa"><br>
+    Valor da empresa: <input id="input_valor_bolsa_empresa"><br>
+    Valor VR: <input id="input_valor_VR"><br>
+    Tempo de deslocamento: <input id="input_tempo_deslocamento"><br>
+    <button onclick="calcular()">É preferida ??</button><br>
+
+    <div id="frase"></div>
+
+</body>
+</html>
+
+<script>
+    function calcular(){
+        var bolsa_empresa = Number(input_valor_bolsa_empresa.value)
+        var valor_VR = Number(input_valor_VR.value)
+        var tempo_deslocamento = Number(input_tempo_deslocamento.value)
+
+        if(bolsa_empresa >= 1800 || valor_VR >= 20 || tempo_deslocamento <= 30){
+            frase.innerHTML = `A empresa ${input_nome_empresa.value} é uma de suas preferências` 
+
+        }
+        else{
+            frase.innerHTML = `A empresa ${input_nome_empresa.value} está fora da sua lista` 
+        }
+
+
+
+    }
+
+
+
+
+
+</script>
